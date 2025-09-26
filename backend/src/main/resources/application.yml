@@ -27,7 +27,7 @@ spring:
       client:
         registration:
           kakao:
-            clientId: ON_SECRET # 임시처리
+            clientId: ON_SECRET
             scope: profile_nickname, profile_image
             client-name: Kakao
             authorization-grant-type: authorization_code
