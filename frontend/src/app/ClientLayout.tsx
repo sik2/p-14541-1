@@ -33,15 +33,21 @@ export default function ClientLayout({
             <>
               <button
                 onClick={logout}
-                className="p-2 rounded hover:bg-gray-100"
+                className="p-2 rounded hover:bg-gray-100 flex"
               >
                 로그아웃
               </button>
               <Link
                 href="/members/me"
-                className="p-2 rounded hover:bg-gray-100"
+                className="p-2 rounded hover:bg-gray-100 flex gap-2"
               >
-                {loginMember.nickname}님의 정보
+                <span>{loginMember.name}님의 정보</span>
+                <img
+                  src={loginMember.profileImageUrl}
+                  width="30"
+                  alt=""
+                  className="rounded-full object-cover aspect-[1/1]"
+                />
               </Link>
             </>
           ) : (
