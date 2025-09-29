@@ -41,7 +41,7 @@ export default function ClientLayout({
                 href="/members/me"
                 className="p-2 rounded hover:bg-gray-100 flex gap-2"
               >
-                <span>{loginMember.name}님의 정보</span>
+                <span>{loginMember.nickname}님의 정보</span>
                 <img
                   src={loginMember.profileImageUrl}
                   width="30"
