@@ -1,6 +1,7 @@
 package com.back.global.security;
 
 
+import com.back.domain.member.member.entity.Member;
 import com.back.domain.member.member.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -43,7 +44,7 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
         String password = "";
 
         // TODO: 회원가입 처리
-        // Member member = memberService.modifyOrJoin(username, password, nickname, profileImgUrl).data();
+         Member member = memberService.modifyOrJoin(username, password, nickname, profileImgUrl).data();
 
         return new DefaultOAuth2User(List.of(),
                 attributes,
